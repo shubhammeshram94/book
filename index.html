@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <style>
+      h1 {
+        text-align: center;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Login</h1>
+
+      <div class="row">
+        <div class="col"></div>
+        <div class="col">
+          <div class="form">
+            <div class="mb-3">
+              <label for="">UserName</label>
+              <input id="name" type="text" class="form-control" />
+            </div>
+            <div class="mb-3">
+              <label for="">Password</label>
+              <input id="password" type="password" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label for="">Email</label>
+                <input id="email" type="text" class="form-control" />
+              </div>
+
+              <div class="mb-3">
+                <label for="">Age</label>
+                <input id="age" type="text" class="form-control" />
+              </div>
+              <div class="mb-3">
+                <label for="">Address</label>
+                <input id="address" type="text" class="form-control" />
+              </div>
+              <div class="mb-3">
+                <label for="">10th %</label>
+                <input id="T" type="text" class="form-control" />
+              </div>
+              <div class="mb-3">
+                <label for="">10th %</label>
+                <input id="T" type="text" class="form-control" />
+              </div>
+              <div class="mb-3">
+                <label for="">12th %</label>
+                <input id="T2" type="text" class="form-control" />
+              </div>
+              <div class="mb-3">
+                <label for="">Degree</label>
+                <input id="degree" type="text" class="form-control" />
+              </div>
+              <div class="mb-3">
+                <label for="">University</label>
+                <input id="degree" type="text" class="form-control" />
+              </div>
+              <div class="mb-3">
+                <input type="button" value="Register" onclick="register()">
+              </div>
+            
+          </div>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+    <script>
+      function register()
+      {
+          var refToRollNo = document.getElementById("txtrollno");
+          var refToName = document.getElementById("txtname");
+          var refToPrn = document.getElementById("txtprn");
+          var refToErrDiv = document.getElementById("errdiv");
+  
+          if(refToRollNo.value=="" || refToPrn.value== "" || refToName.value=="")
+          {
+              refToErrDiv.innerText="credentials Invalid!!!"
+          }
+          else
+          {  
+              refToErrDiv.innerText=""
+                  sessionStorage.setItem("RollNO",refToRollNo.value);
+                  sessionStorage.setItem("Name",refToName.value);
+                  sessionStorage.setItem("PRN",refToPrn.value);
+              
+              window.location.href="summary.html";
+          }
+  
+      }
+  </script>
+  
+  </body>
+</html>
